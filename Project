@@ -1,0 +1,221 @@
+作者背景
+Hangyi Hao，16岁，女，成都，高中国际部在读。暑假初学Python~
+项目背景
+
+这是我暑假时自我创建的一个代码。
+所谓编程，就是要走在时代的前端。上海的“垃圾分类”，卷来了一股风，使得全世界都在对其进行关注。因此，为使各大市民提前适应垃圾分类，我做了一个小测试程序。
+
+Easygui，Time；
+设置账户和密码
+登陆账户和密码
+4道题：答题与判断
+相关口诀
+那我们现在愉快的开始吧~！
+
+导入库
+在这里，我们需要导入easygui和time库，比较简单~
+import easygui，time
+用户名以及密码
+username = easygui.enterbox('请定义您的用户名： ') password = easygui.enterbox('请定义您的密码： ') newname = easygui.enterbox('请输入用户名： ')博客设置页面，`
+匹配用户名以及密码
+这里需要用到if-else语句：
+接下来设置定义用户名、密码与输入用户名、密码互相匹配的代码显示：
+if username == newname:
+    newpassword == easygui.enterbox("请输入您的密码：")
+    if newpassword == password:
+        easygui.msgbox('登录成功')
+        easygui.msgbox('欢迎登录' + newname +'祝您取得好成绩')
+        easygui.msgbox('这1是一个关于垃圾分类的小测试')
+        easygui.ynbox('R U Ready?!')123456
+如若互相不匹配，需要用以下代码来实现：
+    else:
+       	easygui.msgbox("密码不匹配")
+else:
+    easygui.msgbox('用户名不匹配')
+    1234
+好的，让我们来查看一下进度条：
+
+ 前置工作任务
+ 出题
+现在让我们开始“万众瞩目的出题吧！
+
+出题
+
+其实会出第一题之后，我们便可以“依葫芦画瓢”地出出后面3题：
+值得一提的是，这里的重点是if—elif—else语句,以及给出正确答案后要加分：
+score =  0
+name1 = easygui.enterbox('''请问打湿报纸是什么垃圾？？
+        1.干垃圾 2.湿垃圾 3.有害垃圾 4.可回收垃圾''' )    
+        if name1 == '1':
+            easygui.msgbox('？？？它是可回收垃圾')                                
+        elif name1 == '2':
+            easygui.msgbox('呵呵，报纸再湿也是可回收垃圾，不是湿垃圾')
+        elif name1 == '3':
+            easygui.msgbox('？？？它是可回收垃圾')
+        elif name1 == '4':
+            easygui.msgbox('Bingo!!!')
+            score += 25
+        else:
+            easygui.msgbox("输入错误")
+ 1234567891011121314
+同样的，我们给出2、3、4题：
+#第二轮判断
+        name2 = easygui.enterbox('再来再来！请问打湿的纸是什么垃圾？？1.干垃圾 2.湿垃圾 3.有害垃圾 4.厨余垃圾' )
+        if name2 == '1':
+            easygui.msgbox('Bingo!!!')
+            score +=25
+        elif name2 == '2':
+            easygui.msgbox('呵呵，纸再湿都是干垃圾，不是湿垃圾')
+        elif name2 == '3':
+            easygui.msgbox('？？？纸再湿都是干垃圾')
+        elif name2 == '4':
+            easygui.msgbox('谁说一定是在厨房打湿的？！纸再湿都是干垃圾，不是湿垃圾')
+        else:
+            easygui.msgbox("输入错误")
+        #第三轮判断
+        easygui.msgbox('听说你不服气，那我们再来！')
+        name3 = easygui.enterbox('请问煮汤后的鱼骨头是什么垃圾？？？？？1.干垃圾 2.湿垃圾 3.有害垃圾 4.厨余垃圾' )
+        if name3 == '1':
+            easygui.msgbox('鱼知道了会被你气死')
+        elif name3 == '2':
+            easygui.msgbox('鱼知道了会被你气死')
+        elif name3 == '3':
+            easygui.msgbox('鱼知道了会被你气死')
+        elif name3 == '4':
+            easygui.msgbox('鱼知道了会被你气死')
+            score +=25
+        else:
+            easygui.msgbox("输入错误")
+        #第四轮判断
+        easygui.msgbox('我们继续~')
+        name4 = easygui.enterbox('请问干的口香糖是什么垃圾？？1.干垃圾2.湿垃圾3.有害垃圾4.可回收垃圾')
+        if name4 == '1':
+            easygui.msgbox('口香糖再干都是湿垃圾。。。记住了吗？')
+        elif name4 == '2':
+            easygui.msgbox('Bingo！！！')
+            score +=25
+        elif name4 == '3':
+            easygui.msgbox('那你以后就别吃了，口香糖再干都是湿垃圾')
+        elif name4 == '4':
+            easygui.msgbox('。。。口香糖再干都是湿垃圾')
+        else:
+            easygui.msgbox('输入错误')12345678910111213141516171819202122232425262728293031323334353637383940
+由于这是一个测试，所以我们需要给出分数以及相应的评语：
+easygui.msgbox("您的成绩为：" + str(score))
+        if score == 25 or score == 50:
+            easygui.msgbox('完全不及格嘛')
+        elif score == 75:
+            easygui.msgbox('完全不及格嘛')
+        else:
+            easygui.msgbox('优秀的公民！！！')
+        easygui.msgbox('不管考多少分，请静候3秒')1234567
+其实考试的目的不是评分，而是让大家掌握所学知识。
+因此，我们需要给出口诀。
+值得一提的是，这里我们需要让程序延缓3秒，则需要用到time.sleep模块
+如下：
+time.sleep(3)
+        easygui.msgbox('算了算了，教你一个口诀吧')
+        easygui.msgbox('猪能吃的是干垃圾')
+        easygui.msgbox('猪不能吃的是湿垃圾')
+        easygui.msgbox('猪吃了会挂掉的是有害垃圾')
+        easygui.msgbox('卖了能买猪的是可回收垃圾')
+        easygui.ynbox("拿小本本记好了吗？")123456
+整体思路
+chart流程图
+我们依旧会支持flowchart的流程图：
+Created with Raphaël 2.2.0开始答题，出分确认？结束yesno
+
+关于 Flowchart流程图 语法，参考 [这儿][4].
+
+整体代码：
+import easygui
+import time
+username = easygui.enterbox('请定义您的用户名： ')
+password = easygui.enterbox('请定义您的密码： ')
+newname = easygui.enterbox('请输入用户名： ')
+if username == newname:
+    newpassword = easygui.enterbox('请输入您的密码： ')
+    if newpassword == password:
+        easygui.msgbox('登录成功')
+        easygui.msgbox('欢迎登录' + newname +'祝您取得好成绩')
+        easygui.msgbox('这是一个关于垃圾分类的小测试')
+        easygui.ynbox('R U Ready?!')
+        #第一轮判断
+        score = 0
+        name1 = easygui.enterbox('''请问打湿报纸是什么垃圾？？
+        1.干垃圾 2.湿垃圾 3.有害垃圾 4.可回收垃圾''' )    
+        if name1 == '1':
+            easygui.msgbox('？？？它是可回收垃圾')                                
+        elif name1 == '2':
+            easygui.msgbox('呵呵，报纸再湿也是可回收垃圾，不是湿垃圾')
+        elif name1 == '3':
+            easygui.msgbox('？？？它是可回收垃圾')
+        elif name1 == '4':
+            easygui.msgbox('Bingo!!!')
+            score +=25
+        else:
+            easygui.msgbox("输入错误")
+        #第二轮判断
+        name2 = easygui.enterbox('再来再来！请问打湿的纸是什么垃圾？？1.干垃圾 2.湿垃圾 3.有害垃圾 4.厨余垃圾' )
+        if name2 == '1':
+            easygui.msgbox('Bingo!!!')
+            score +=25
+        elif name2 == '2':
+            easygui.msgbox('呵呵，纸再湿都是干垃圾，不是湿垃圾')
+        elif name2 == '3':
+            easygui.msgbox('？？？纸再湿都是干垃圾')
+        elif name2 == '4':
+            easygui.msgbox('谁说一定是在厨房打湿的？！纸再湿都是干垃圾，不是湿垃圾')
+        else:
+            easygui.msgbox("输入错误")
+        #第三轮判断
+        easygui.msgbox('听说你不服气，那我们再来！')
+        name3 = easygui.enterbox('请问煮汤后的鱼骨头是什么垃圾？？？？？1.干垃圾 2.湿垃圾 3.有害垃圾 4.厨余垃圾' )
+        if name3 == '1':
+            easygui.msgbox('鱼知道了会被你气死')
+        elif name3 == '2':
+            easygui.msgbox('鱼知道了会被你气死')
+        elif name3 == '3':
+            easygui.msgbox('鱼知道了会被你气死')
+        elif name3 == '4':
+            easygui.msgbox('鱼知道了会被你气死')
+            score +=25
+        else:
+            easygui.msgbox("输入错误")
+        #第四轮判断
+        easygui.msgbox('我们继续~')
+        name4 = easygui.enterbox('请问干的口香糖是什么垃圾？？1.干垃圾2.湿垃圾3.有害垃圾4.可回收垃圾')
+        if name4 == '1':
+            easygui.msgbox('口香糖再干都是湿垃圾。。。记住了吗？')
+        elif name4 == '2':
+            easygui.msgbox('Bingo！！！')
+            score +=25
+        elif name4 == '3':
+            easygui.msgbox('那你以后就别吃了，口香糖再干都是湿垃圾')
+        elif name4 == '4':
+            easygui.msgbox('。。。口香糖再干都是湿垃圾')
+        else:
+            easygui.msgbox('输入错误')
+        easygui.msgbox("您的成绩为：" + str(score))
+        if score == 25 or score == 50:
+            easygui.msgbox('完全不及格嘛')
+        elif score == 75:
+            easygui.msgbox('完全不及格嘛')
+        else:
+            easygui.msgbox('优秀的公民！！！')
+        easygui.msgbox('不管考多少分，请静候3秒')
+        
+        #最后结尾提示
+        time.sleep(3)
+        easygui.msgbox('算了算了，教你一个口诀吧')
+        easygui.msgbox('猪能吃的是干垃圾')
+        easygui.msgbox('猪不能吃的是湿垃圾')
+        easygui.msgbox('猪吃了会挂掉的是有害垃圾')
+        easygui.msgbox('卖了能买猪的是可回收垃圾')
+        easygui.ynbox("拿小本本记好了吗？")
+    else:
+        easygui.msgbox("密码不匹配")
+else:
+    easygui.msgbox('用户名不匹配')
+
+Contact me: 1773632066@qq.com
